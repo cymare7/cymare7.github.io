@@ -76,8 +76,7 @@ The output is written to `2424.dmp`, we need to rename it to `2424.data` to be a
 After playing a bit with the width and offset. I got an image which is somewhat flipped. I rotated it 180 degrees then flipped it horizontally and Voila!, I got the flag.
 
 
-[![4](/assets/images/Digital-Forensicctf-writeups/memlabs/lab1/4.jpg)](/assets/images/Digital-Forensic/memlabs/lab1/4.jpg) 
-[![5](/assets/images/Digital-Forensic/memlabs/lab1/5.jpg)](/assets/images/Digital-Forensic/memlabs/lab1/5.jpg)
+[![4](/assets/images/Digital-Forensic/memlabs/lab1/4.jpg)](/assets/images/Digital-Forensic/memlabs/lab1/4.jpg) | [![5](/assets/images/Digital-Forensic/memlabs/lab1/5.jpg)](/assets/images/Digital-Forensic/memlabs/lab1/5.jpg)
 
 > #### Flag 2: flag{G00d_Boy_good_girL}
 
