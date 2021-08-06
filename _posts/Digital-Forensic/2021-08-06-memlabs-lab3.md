@@ -34,14 +34,14 @@ To deal with memory dump we need first to know operating system
 ```
 $ volatility -f MemoryDump_Lab3.raw imageinfo
 ```
-[[!1](/assets/images/Digital-Fronsic/memlabs/lab3/1.jpg)](/assets/images/Digital-Fronsic/memlabs/lab3/1.jpg)
+[![1](/assets/images/Digital-Fronsic/memlabs/lab3/1.jpg)](/assets/images/Digital-Fronsic/memlabs/lab3/1.jpg)
 
 Then we need to know the open processes during memory acquisition.
 
 ```
 $volatility -f MemoryDump_Lab3.raw --profile=Win7SP1x86 pslist 
 ```
-[[!2](/assets/images/Digital-Fronsic/memlabs/lab3/2.jpg)](/assets/images/Digital-Fronsic/memlabs/lab3/2.jpg)
+[![2](/assets/images/Digital-Fronsic/memlabs/lab3/2.jpg)](/assets/images/Digital-Fronsic/memlabs/lab3/2.jpg)
 
 We see intersted process may be attacker use notpad.exe to run the malicious code .
 so we will use plugin called cmdline 
@@ -76,7 +76,7 @@ $ volatility -f MemoryDump_Lab3.raw --profile Win7SP1x86_23418 dumpfiles -Q 0x00
 
 After dumping We notice that This evil script is XORing the file `vip.txt` with a single character then Base64 encoding it. 
 
-[[!3](/assets/images/Digital-Fronsic/memlabs/lab3/3.jpg)](/assets/images/Digital-Fronsic/memlabs/lab3/3.jpg)
+[![3](/assets/images/Digital-Fronsic/memlabs/lab3/3.jpg)](/assets/images/Digital-Fronsic/memlabs/lab3/3.jpg)
 
 we write simple python script to decode it .
 ```
@@ -103,7 +103,7 @@ $volatility -f MemoryDump_Lab3.raw --profile Win7SP1x86_23418 dumpfiles -Q0x0000
 Volatility Foundation Volatility Framework 2.6
 DataSectionObject 0x04f34148   None   \Device\HarddiskVolume2\Users\hello\Desktop\suspision1.jpeg
 ```
-[[!4](/assets/images/Digital-Fronsic/memlabs/lab3/4.jpeg)](/assets/images/Digital-Fronsic/memlabs/lab3/4.jpeg)
+[![4](/assets/images/Digital-Fronsic/memlabs/lab3/4.jpeg)](/assets/images/Digital-Fronsic/memlabs/lab3/4.jpeg)
 
 
 Here comes `steghide`, this image must have something hidden.
