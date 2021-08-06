@@ -46,7 +46,7 @@ $ volatility -f MemoryDump_Lab2.raw --profile=Win7SP1x64 envars | less
 
 ``` 
 
-[![3](/assests/images/Digital_Forensic/memlabs/lab2/3.jpg)](/assests/images/Digital_Forensic/memlabs/lab2/3.jpg)
+[![3](/assets/images/Digital-Forensic/memlabs/lab2/3.jpg)](/assets/images/Digital-Forensic/memlabs/lab2/3.jpg)
 
 We found base64 string we decode it we have the first flag
 
@@ -95,13 +95,13 @@ Volatility Foundation Volatility Framework 2.6.1
 DataSectionObject 0x3fce1c70   None   \Device\HarddiskVolume2\Users\Alissa Simpson\Pictures\Password.png
 ```
 
-[![4](/assets/images/Digital-Fronsic/memlabs/lab2/4.png)](/assets/images/Digital-Fronsic/memlabs/lab2/4.png)
+[![4](/assets/images/Digital-Forensic/memlabs/lab2/4.png)](/assets/images/Digital-Forensic/memlabs/lab2/4.png)
 
 If you look closely at the bottom right, you can spot the password.
 
 Now let's use this password to open the database in KeePass.
 
-[![5](/assets/images/Digital_Forensic/memlabs/lab2/5.png)](/assets/images/Digital_Forensic/memlabs/lab2/5.png) | [![6](/assets/images/Digital_Forensic/memlabs/lab2/6.png)](/assets/images/Digital_Forensic/memlabs/lab2/6.png)
+[![5](/assets/images/Digital-Forensic/memlabs/lab2/5.png)](/assets/images/Digital_Forensic/memlabs/lab2/5.png) | [![6](/assets/images/Digital-Forensic/memlabs/lab2/6.png)](/assets/images/Digital_Forensic/memlabs/lab2/6.png)
 
 The flag is the copied password.
 
@@ -115,7 +115,7 @@ Github repo has the plugin we need: [Volatility-Plugins](https://github.com/supe
 $ volatility --plugins=plugins/ -f MemoryDump_Lab2.raw --profile Win7SP1x64 chromehistory > chromehistory.txt
 ```
 
-[![7](/assets/images/Digital-Fronsic/memlabs/lab2/7.jpg)](/assets/images/Digital-Fronsic/memlabs/lab2/7.jpg)
+[![7](/assets/images/Digital-Forensic/memlabs/lab2/7.jpg)](/assets/images/Digital-Forensic/memlabs/lab2/7.jpg)
 
 We have mega link, let's open it we found zip file , let's download it .
 
@@ -132,6 +132,6 @@ $ echo -n flag{w3ll_3rd_stage_was_easy} | sha1sum
 ```
 After unzipping the file, I got this image.
 
-[![8](/assets/images/Digital-Fronsic/memlabs/lab2/8.png)](/assets/images/Digital-Fronsic/memlabs/lab2/8.png)
+[![8](/assets/images/Digital-Forensic/memlabs/lab2/8.png)](/assets/images/Digital-Forensic/memlabs/lab2/8.png)
 
 > #### Flag 3: flag{oK_So_Now_St4g3_3_is_DoNE!!}
